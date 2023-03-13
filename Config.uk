@@ -1,0 +1,10 @@
+menuconfig LIBUBPF
+	bool "ubpf Unikraft library"
+	default n
+
+if LIBUBPF
+config LIBUBPF_MAIN_FUNCTION
+	bool "Provide main function"
+	default n
+
+endif
