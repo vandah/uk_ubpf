@@ -45,8 +45,8 @@ LIBUBPF_VERSION = 029ea2b6e1e06337ed8fe577b4a4ee09ed0dce7d
 LIBUBPF_URL = http://github.com/iovisor/ubpf/archive/$(LIBUBPF_VERSION).zip
 LIBUBPF_SUBDIR = ubpf-$(LIBUBPF_VERSION)
 LIBUBPF_PATCHDIR = $(LIBUBPF_BASE)/patches
-$(eval $(call patch,libubpf,$(LIBUBPF_PATCHDIR),$(LIBUBPF_SUBDIR)))
 $(eval $(call fetch,libubpf,$(LIBUBPF_URL)))
+$(eval $(call patch,libubpf,$(LIBUBPF_PATCHDIR),$(LIBUBPF_SUBDIR)))
 
 ################################################################################
 # Helpers
