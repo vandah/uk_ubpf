@@ -55,7 +55,7 @@ LIBUBPF_SRC = $(LIBUBPF_ORIGIN)/$(LIBUBPF_SUBDIR)
 
 ################################################################################
 # FIXME: hack to build ubpf/vm
-_A = $(eval $(shell make -C $(LIBUBPF_SRC)/vm))
+_A := $(shell make -C $(LIBUBPF_SRC)/vm)
 
 ################################################################################
 # Library includes
