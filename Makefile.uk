@@ -58,7 +58,7 @@ LIBUBPF_SRC = $(LIBUBPF_ORIGIN)/$(LIBUBPF_SUBDIR)
 $(LIBUBPF_SRC)/vm/inc/ubpf_config.h: $(LIBUBPF_SRC)
 	make -C $(LIBUBPF_SRC)/vm
 
-UK_PREPARE += $(LIBUBPF_SRC)/vm/inc/ubpf_config.h
+UK_PREPARE-$(CONFIG_LIBUBPF) += $(LIBUBPF_SRC)/vm/inc/ubpf_config.h
 
 ################################################################################
 # Library includes
