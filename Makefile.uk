@@ -54,8 +54,11 @@ $(eval $(call patch,libubpf,$(LIBUBPF_PATCHDIR),$(LIBUBPF_SUBDIR)))
 LIBUBPF_SRC = $(LIBUBPF_ORIGIN)/$(LIBUBPF_SUBDIR)
 
 ################################################################################
-# FIXME: hack to build ubpf/vm
-_A := $(shell make -C $(LIBUBPF_SRC)/vm)
+
+$(LIBUBPF_SRC)/vm/inc/ubpf_config.h: $(LIBUBPF_SRC)
+	make -C $(LIBUBPF_SRC)/vm
+
+UK_PREPARE += $(LIBUBPF_SRC)/vm/inc/ubpf_config.h
 
 ################################################################################
 # Library includes
