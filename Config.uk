@@ -1,5 +1,6 @@
 menuconfig LIBUBPF
 	bool "ubpf Unikraft library"
+	select LIBUKMMAP
 	default n
 
 if LIBUBPF
